@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <title>vnewyen</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <link href="main.css" rel="stylesheet" type="text/css"/>
+
+  </head>
+
+  <link rel="icon" href="images/home.png">
+
+  <body>
+    <!-- Center information -->
+    <div class="top">
+      <div class="mid">
+        <div class="bot">
+          <!--Center Portrait-->
+          <img src="images/portrait.jpg" class="portraitOne" alt="Avatar" height="165" width="165">
+          <span class="name">
+            Vincent Nguyen
+          </span>
+          <span class ="time">
+            <span id="time"></span>
+            <script>
+              (function() {
+                  function startTime() {
+                      var today = new Date(),
+                        h = today.getHours(),
+                        m = today.getMinutes(),
+                        s = today.getSeconds();
+                      var am_pm = "AM";
+                        if (h>=12){
+                          am_pm = "PM";
+                        }
+
+                      if (h == 0) {
+                        h = 12;
+                      }
+                      else if (h>12) {
+                        h = h - 12;
+                      }
+
+                      if(m < 10) m = "0" + m;
+                      if(h < 10) h = "0" + h
+
+                      document.getElementById('time').innerHTML = h + ":" + m + " " + am_pm;
+                      t = setTimeout(function () {
+                          startTime()
+                      }, 500);
+                  }
+                  startTime();
+              })();
+            </script>
+          </span>
+        <span class="date">
+          <span id="date"></span>
+          <script>
+            var dt = new Date();
+            y = dt.getFullYear();
+            m = dt.getMonth() + 1;
+            d = dt.getDate();
+            document.getElementById("date").innerHTML = m + "." + d + "." + y + " "
+          </script>
+        </span>
+        <span class="info">
+          <hr class="solid">
+          <a href="about.html"> About </a> &emsp;&emsp;
+          <a href="project.html"> Projects </a> &emsp;&emsp;
+          <a href="Resume.pdf" target="_blank"> Resume </a>
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <!--Redirecting social media logos -->
+  <div class="rSide">
+    <div class="rOne">
+      <div class="rTwo">
+        <span class="info">
+          <!--Logos-->
+          <a href="http://www.youtube.com/c/vnewyen" target="_blank"><img src="images/yt.png" height="32" width="32"/></a><br>
+          <a href="https://instagram.com/vnewyen" target="_blank"><img src="images/ig.png" height="35" width="35"/></a><br>
+          <a href="https://www.linkedin.com/in/nguyenvh/" target="_blank"><img src="images/linkin.png" height="35" width="35"/></a><br>
+          <a href="https://github.com/vnewyen" target="_blank"><img src="images/ghub.png" height="35" width="35"/></a>
+        </span>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  </body>
+</html>

@@ -73,11 +73,16 @@ a:hover {
   border-radius: 50%;
 }
 
-.name{
+.name, .project, .about{
   font-weight: normal;
   font-size: 30px;
   letter-spacing: 10px;
   text-shadow: 2px 2px black;
+}
+
+.linkName{
+  font-size: 20px;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
 body, .bot {
@@ -111,4 +116,13 @@ body, .bot {
 .HOME, a:hover {
   filter: brightness(110%);
   opacity: 1;
+}
+
+.aboutDesc {
+	width: 300px;
+}
+
+p {
+  	font-family: 'simplifica';
+	font-size: 20px;
 }
